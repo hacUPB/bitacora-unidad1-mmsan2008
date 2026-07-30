@@ -1,4 +1,6 @@
 
+//“Crea un programa que use un ciclo para sumar los números del 1 al 5 y guarde el resultado en la dirección de memoria 12.”//
+
 //inicializa suma y guarda en la variable @sum
 @0
 D=A
@@ -19,7 +21,22 @@ D=M
 D=D-A
 @FIN
 D;JGT
-
+ 
 //incrementa 
 @contador
+D=M
+@sum
+M=D+M
+
+@contador
 M=M+1
+
+@CICLO
+0;JMP
+
+(FIN)
+
+@sum
+D=M
+@12
+M=D

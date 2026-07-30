@@ -15,6 +15,8 @@ M=M+1
 
 Aquí la ALU suma 1 al contenido de la memoria (M) y guarda el resultado en la misma posición de memoria.
 
+![alt text](../Imagenes/m1.png)
+
 2. ¿Para qué sirve el registro PC?
 
 El PC (Program Counter) o Contador de Programa almacena la dirección de la siguiente instrucción que debe ejecutar el procesador.
