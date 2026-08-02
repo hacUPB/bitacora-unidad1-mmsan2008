@@ -1,0 +1,24 @@
+@100
+D=A 
+@punt
+M=D 
+@10
+D=A 
+@count
+M=D 
+
+(LOOP)
+@7
+D=A 
+@punt
+A=M 
+M=D
+@punt
+M=M+1
+@count
+MD= M-1
+@LOOP
+D;JGT
+(END)
+@END
+0;JMD
