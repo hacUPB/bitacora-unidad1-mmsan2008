@@ -14,7 +14,7 @@ Otro ejemplo es:
 M=M+1
 
 Aquí la ALU suma 1 al contenido de la memoria (M) y guarda el resultado en la misma posición de memoria.
-
+![alt text](<../Imagenes/act int 1.1.png>)
 ![alt text](../Imagenes/m1.png)
 
 ![alt text](i2.png)
