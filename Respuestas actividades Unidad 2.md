@@ -2,7 +2,7 @@ Actividad 3: Mapa de memoria de un programa escrito en C++
 <img width="479" height="526" alt="image" src="https://github.com/user-attachments/assets/8eb7c997-cb93-43c0-8d93-432c6162a53a" />
 
 
-Actividad 4: Experimentos
+##Actividad 4: Experimentos
 
 los comentarios estan dentro de los codigos.
 
@@ -10,13 +10,13 @@ Actividad 5: Copia de objetos y su ubicación en memoria
 
 **Reflexión final para esta actividad**
 
-1. Explica qué ocurre al copiar un objeto en C++ y en C#. ¿Qué diferencias encuentras?
+##1. Explica qué ocurre al copiar un objeto en C++ y en C#. ¿Qué diferencias encuentras?
 En c# al copiar un objeto directamente se copia el valor 
 En cambio, en C++ se copia mediante una referencia, guardando el valor en la dirección de memoria. 
 
 
-2. ¿Qué es `copia` en C++ y en C#? ¿Es una copia independiente de `original`?
-3. 
+##2. ¿Qué es `copia` en C++ y en C#? ¿Es una copia independiente de `original`?
+
 En C# se copió mediante una copia por valor y es independiente del original
 y en C++ se copia mediante una referencia y hace referencia al mismo objeto, entonces no es independiente.
 
@@ -25,23 +25,18 @@ Actividad integradora de investigación
 
 **A. Predicción (sin ejecutar el código):**
 
-1. ¿Cuál será la salida final en la consola de este programa?
-2. Escribe la salida completa que esperas.
-3. 
+##1. ¿Cuál será la salida final en la consola de este programa?
+
 en val_A suma por valor su salida será 30 ya que 20 + 10 30 pero val_A seguirá siendo 20 ya que nada mas recive una copia.
 en val_b suma por referencia su salida será 30 y modifica la dirección de memoria ya que hace la operación dentro de una referencia del objeto original
 en val_c suma por puntero su salida será 30 ya que va a la dirección de memoria de val_c y modifica directamente su contenido
 y el contador pasa de 1 - 2 - 3 y incrementa  ya que la variable estática conserva su valor cuando sale de la función y la vuelve a llamar
 
-4. Dibuja un mapa de memoria conceptual de este programa justo antes de que `main` finalice. Debes indicar en qué segmento de memoria (Stack, Heap, Datos Globales/Estáticos, Código) se encontraría cada una de las siguientes variables: `contador_global`, `contador_estatico`, `val_A`, `val_B`, `val_C` (dentro de main), el parámetro a de la función `sumaPorValor`, la función main misma.
+##2. Dibuja un mapa de memoria conceptual de este programa justo antes de que `main` finalice. Debes indicar en qué segmento de memoria (Stack, Heap, Datos Globales/Estáticos, Código) se encontraría cada una de las siguientes variables: `contador_global`, `contador_estatico`, `val_A`, `val_B`, `val_C` (dentro de main), el parámetro a de la función `sumaPorValor`, la función main misma.
 
  <img width="400" height="703" alt="image" src="https://github.com/user-attachments/assets/4c8efc8b-d60c-49f1-934d-7577d6f0a540" />
 
-
-**B. Verificación y análisis (usando el depurador):**
-Ejecuta el programa paso a paso (F10) con un `breakpoint` al inicio de `main`.
-
-5. Compara la salida real con tu predicción. Si hubo diferencias, explica por qué ocurrieron. Evidencia clave: capturas de pantalla antes y después de los puntos de interés (¿Cuáles son esos puntos? -> tu tarea analizarlo).
+##3. Compara la salida real con tu predicción. Si hubo diferencias, explica por qué ocurrieron. Evidencia clave: capturas de pantalla antes y después de los puntos de interés (¿Cuáles son esos puntos? -> tu tarea analizarlo).
 La salida real coincidió con la predicción realizada val_A permaneció en 20 porque fue pasado por valor, mientras que val_B y val_C cambiaron a 30 porque fueron modificados mediante referencia y puntero. Además, contador estático conservó su valor entre las llamadas y aumentó de 1 a 3.
 
 (Este análisis lo puede hacer en clase pero en mi casa me sale este error al ejecutar el programa entonces no puedo sacar las capturas )
@@ -49,11 +44,11 @@ La salida real coincidió con la predicción realizada val_A permaneció en 20 p
 <img width="1908" height="1010" alt="image" src="https://github.com/user-attachments/assets/e83a0982-07c7-4583-9cab-c8383f7d3241" />
 
 
-6. Describe qué demuestran estas capturas sobre la diferencia entre los diferentes tipos de paso por parámetros analizados.
+##6. Describe qué demuestran estas capturas sobre la diferencia entre los diferentes tipos de paso por parámetros analizados.
    
 Las capturas demuestran que pasar un parámetro por valor crea una copia por lo que los cambios no afectan a la variable original. por otro lado pasar por referencia o por puntero permite modificar directamente la variable original, Por eso val_a queda en 20, mientras que val_b y val_c terminan en 30.
 
-7 Explica con tus propias palabras el comportamiento de contador_estatico. ¿Por qué “recuerda” su valor entre llamadas a la función ejecutarContador? ¿En qué se diferencia de una variable local normal?
+##7 Explica con tus propias palabras el comportamiento de contador_estatico. ¿Por qué “recuerda” su valor entre llamadas a la función ejecutarContador? ¿En qué se diferencia de una variable local normal?
 
 La variable estática solo se inicializa una vez y esta mantiene su valor durante toda la ejecución del programa por eso en cada llamada aumenta 1-2-3
 
