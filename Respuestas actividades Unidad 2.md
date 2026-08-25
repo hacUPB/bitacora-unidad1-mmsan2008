@@ -100,9 +100,20 @@ en c# la referencia p esta en el stack pero al objeto que apunta esta en el heap
 Modifica el programa anterior para crear un objeto de la clase Punto de manera dinámica (en el heap) utilizando new. Luego, inspecciona con el depurador la dirección del objeto y compárala con la del objeto en el stack.
 
 1. Explicación de la diferencia entre objetos creados en el stack y en el heap.
+   
+Los objetos creados en el stack se eliminan cuando salen de este por otro lado heap guarda los datos con new y solo se puede borrar con  un destructor.
+
 2. `pStack` ¿Es un objeto o una referencia a un objeto?
+   
+p stack es un objeto de la clase punto se crea directamente en el stack
+   
 3. `pHeap` ¿Es un objeto o una referencia a un objeto? Si es una referencia, ¿A qué objeto hace referencia?
+
+pheap es un puntero que contiene la dirección de un objeto punto creado en el heap
+   
 4. Observa en Memory1 (Debug->Windows->Memory->Memory1) el contenido de la dirección de memoria de `pHeap`, recuerda escribir en la entrada de texto de Memory1 la dirección de memoria de `&pHeap` y presionar Enter. Compara el contenido de memoria con el contenido de `pHeap` en la pestaña de Locals (Debug->Windows->Locals). ¿Qué observas? ¿Qué significa esto?
+
+   se observa la memoria donde está almacenada la variable pHeap. El contenido de esa posición corresponde a una dirección de memoria que es la dirección del objeto Punto(50, 60) creado en el Heap.
 
 
 # **Actividad 8: Funciones y objetos en C++**
