@@ -118,15 +118,17 @@ Analiza, ejecuta, depura y experimenta con el siguiente código en C++.
 **Reflexiona sobre lo siguiente**:
 
 1. ¿Qué ocurre después de llamar a la función `cambiarNombre`? ¿Por qué aparece el mensaje `Destructor: Punto cambiado(70, 80) destruido.`?
-2. ¿Por qué `original` sigue existiendo luego de llamar `cambiarNombre`?
-3. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
-
+al cambiar nombre se crea una copia de original llamada p y dentro de la funcion se cambia el nombre de esta funcion a cambiado y cuando se termina deja de existir la funcion  por eso se destruye con el destructor
+3. ¿Por qué `original` sigue existiendo luego de llamar `cambiarNombre`?
+por que original y p son dos objetos diferentes ya que p es la copia de original
+4. ¿En qué parte del mapa de memoria se encuentra `original` y en qué parte se encuentra `p`? ¿Son el mismo objeto? (recuerda usar siempre el depurador para responder estas preguntas).
+los dos se encuentran en el stack y p es una copia de original entonces no son el mismo objeto
 Modifica la función `cambiarNombre`:
 
 `void cambiarNombre(Punto& p, string nuevoNombre) {  p.name = nuevoNombre;}`
 
 1. ¿Qué ocurre ahora? ¿Por qué?
-2. 
+ahora p es una referencia de el objeto original por lo que al cambiar el nombre tambien se cambia original
 Modifica ahora a `cambiarNombre` y a `main` de la siguiente manera:
 
 ```cpp
@@ -143,5 +145,7 @@ int main() {    // Objeto original
 ```
 
 1. ¿Qué ocurre ahora? ¿Por qué?
-2. En este caso ¿Cuál es la diferencia entre pasar un objeto por valor, por referencia y por puntero?
+2. ahora se pasa la direcion de memoria de original mediante &original y el puntero p apunta al objeto original y modifica directamente su nombre
+3. En este caso ¿Cuál es la diferencia entre pasar un objeto por valor, por referencia y por puntero?
+por valor es una copia, por referencia es una referencia del objeto original, y por puntero es la direccion del original.
 				
