@@ -181,3 +181,29 @@ int main() {    // Objeto original
 ## 3. En este caso ¿Cuál es la diferencia entre pasar un objeto por valor, por referencia y por puntero?
 
 🟢 Por valor es una copia, por referencia es una referencia del objeto original, y por puntero es la direccion del original.
+
+
+# Actividad 9: Objetos con miembros estáticos y variables de instancia
+
+##¿Qué puedes concluir de los miembros estáticos y de instancia de una clase en C++? ¿Cómo se gestionan en memoria? ¿Qué ventajas y desventajas tienen? ¿Cuándo es útil utilizarlos?
+
+Los miembros de instancia pertenecen a cada objeto por lo que cada objeto tiene su propio valor y Los miembros estáticos pertenecen a la clase y son compartidos por todos los objetos como total.
+
+En memoria los valores de cada objeto se almacenan junto con el objeto, mientras que el miembro estático se almacena una sola vez.
+
+Una ventaja de los miembros estáticos es que permiten compartir información entre todos los objetos y Una desventaja es que cualquier objeto puede modificar ese valor compartido ademas Son útiles cuando necesitamos llevar un dato común para todos los objetos como el número total de objetos creados
+
+## En el programa, en qué segmento de memoria se están almacenando c1, c2, c3 y Contador::total?
+c1 y c2 son objetos creados directamente dentro de main, por lo que se encuentran en el Stack.
+c3 es un puntero, por lo que la variable c3 se encuentra en el Stack, pero el objeto que crea mediante new se encuentra en el Heap.
+Contador::total es un miembro estático por lo que se encuentra en la zona de variables Globales yEstáticos y es compartido por todos los objetos.
+
+#Actividad 10: Explorando el ciclo de vida de un objeto
+
+##Explica el ciclo de vida de un objeto en el stack versus uno en el heap.
+
+El objeto en el stack se crea automáticamente al entrar  y se destruye cuando sale y En cambio el objeto en el heap se crea con new y permanece hasta que se libera manualmente con un destructor.
+
+
+
+
