@@ -45,10 +45,22 @@ void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float op
 
 	Node * newnode = new Node(x, y,radius,color,opacity);
 
-	if (rear->next) {
-		rear = nullptr;
+	if (isEmpty) {
+		front = newnode;
+		rear = newnode;
+	}
+	else {
+		rear->next = newnode;
+
+		rear = newnode;
 	}
 	size++;
+
+	if (size > maxSize) {
+		dequeue();
+
+	}
+
 
 
 	// TODO: crear un nuevo nodo y agregarlo al final de la cola.
@@ -57,12 +69,34 @@ void BrushQueue::enqueue(float x, float y, float radius, ofColor color, float op
 // Implementa aquí `dequeue()`
 void BrushQueue::dequeue() {
 
+	if (isEmpty) {
+		return;
+	}
+	else
+	{
+		Node* temp = front;
+
+		while (temp->next != rear) {
+			temp = temp->next;
+		}
+		delete rear;
+		rear = temp;
+		rear->next = nullptr;
+	}
+	size--;
 
 	// TODO: eliminar el nodo más antiguo si la cola no está vacía.
 }
 // Implementa aquí `clear()`
 void BrushQueue::clear() {
-	// TODO: eliminar todos los nodos de la cola.
+	Node* current = rear;
+	while (current != nullptr) {
+		Node* nextNode = current->next;
+		delete current;
+		current = nextNode;
+	}
+	front = rear = nullptr;
+	size = 0;// TODO: eliminar todos los nodos de la cola.
 }
 // Implementa aquí `isEmpty()`
 bool BrushQueue::isEmpty() {
