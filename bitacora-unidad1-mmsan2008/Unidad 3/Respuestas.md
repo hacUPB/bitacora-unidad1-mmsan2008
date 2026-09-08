@@ -10,3 +10,9 @@ un programador decide usar la herencia ya que facilita a la hora de crear clases
 # ¿Qué es el polimorfismo? Describe con tus palabras qué significa que un código sea “polimórfico”.
 
  el polimorfismo es la posibilidad de un objeto de responder a un método de diferentes formas, y si un codigo es poliformico significa que puede responer a un metodo de diferentes formas.
+
+# Actividad 2 
+<img width="1919" height="1031" alt="image" src="https://github.com/user-attachments/assets/7c866b7d-235b-46ec-bac7-9922f6577a67" />
+
+en esta actividad se crea un proyecto con open frame words analizando el codigo puede identificar que se utilizan clases abstractas con metodos estos se llaman mediante herencia en otras clases 
+primero se crea RisingParticle que hereda de particle
