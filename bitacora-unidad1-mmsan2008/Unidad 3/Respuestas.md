@@ -27,3 +27,17 @@ ya ofapp.h actualiza las particulas define en que orden se generan los tipos de 
 en memoria espero ver como la variable vector particles llama a la direccion de memoria de  la instancia de objeto particle 
 
 en la actividad 3 podemos observar al intanciar circular expolición como se aplica el pliformismo en la direccion de memoria se observa como hereda los metodos de particle y les da una direccion de memoria 
+<img width="1890" height="673" alt="image" src="https://github.com/user-attachments/assets/baf6aa62-eefc-4937-9629-0a7ebd20e266" />
+
+
+# Actividad 4
+
+
+¿Qué sucede? aparece un error de compilacion
+¿Por qué sucede esto? por que las variables son protected y private
+¿Qué puedes concluir? que si una variable es privada o protegida no se puede acceder a los datos y aparece error de compilacion
+<img width="1530" height="934" alt="image" src="https://github.com/user-attachments/assets/9d47295c-fcc1-4521-9c7f-401aea667236" />
+
+en esta otra versión aparece error de compilacion otra vez ya que las variables son privadas y no se puede acceder  
+<img width="1470" height="837" alt="image" src="https://github.com/user-attachments/assets/1c485948-f353-4ba6-ac64-569f889db940" />
+
