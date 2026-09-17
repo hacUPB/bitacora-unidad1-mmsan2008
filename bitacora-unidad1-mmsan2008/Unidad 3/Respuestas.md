@@ -40,4 +40,9 @@ en la actividad 3 podemos observar al intanciar circular expolición como se apl
 
 en esta otra versión aparece error de compilacion otra vez ya que las variables son privadas y no se puede acceder  
 <img width="1470" height="837" alt="image" src="https://github.com/user-attachments/assets/1c485948-f353-4ba6-ac64-569f889db940" />
+y en el ultimo ejemplo se puede evidenciar como utiliza reinterpret_cast para poder acceder a las variables privadas de esta manera evadiendo el encapsulamiento 
 
+
+# Actividad 5
+
+la herencia se implementa en la clase hijo colocando dos puntos el tipo de encapsulamiento y la clase padre de la que va a heredar
