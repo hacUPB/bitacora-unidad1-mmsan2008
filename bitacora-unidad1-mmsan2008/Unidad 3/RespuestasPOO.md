@@ -18,7 +18,7 @@ un programador decide usar la herencia ya que facilita a la hora de crear clases
 
 en esta actividad se crea un proyecto con open frame words analizando el codigo puede identificar que se utilizan clases abstractas con metodos estos se llaman mediante herencia en otras clases 
 primero se crea RisingParticle que hereda de particle esta crea la particula con su posicion y velocidad y determina la codicion para que la particula explote 
-despues de crea la clase de explocion particule que hereda igualmente de particle esta determina como va a ser la explocion como su tamaño y color despues se crea CircularExplosion que hereda de ExplosionParticle y esta determina la forma circular de la explocion de esta misma manera tambien se crea RandomExplosion que hace que las explociones tengan diferentes posiciones y startexplocion que determina la explocion en forma de estrella
+Después de crear la clase de explosión partícula que hereda igualmente de particle esta determina cómo va a ser la explosión como su tamaño y color después se crea CircularExplosion que hereda de ExplosionParticle y esta determina la forma circular de la explosión de esta misma manera también se crea RandomExplosion que hace que las explosiones tengan diferentes posiciones y startexplosión que determina la explosión en forma de estrella
 ya ofapp.h actualiza las particulas define en que orden se generan los tipos de explociones  y determina la duracion de las particulas y con que tecla se activan. 
 
 # Actividad 3
@@ -45,4 +45,7 @@ y en el ultimo ejemplo se puede evidenciar como utiliza reinterpret_cast para po
 
 # Actividad 5
 
+
+<img width="1266" height="987" alt="image" src="https://github.com/user-attachments/assets/562af764-cf26-4d7d-90ad-0d72e3557683" />
+Se puede observar como CircularExplosion hereda de ExplosionParticle que a su ves hereda de particle el depurador me proporciona una tabla virtual con los metodos de particle y los atributos de ExplosionParticle 
 la herencia se implementa en la clase hijo colocando dos puntos el tipo de encapsulamiento y la clase padre de la que va a heredar
