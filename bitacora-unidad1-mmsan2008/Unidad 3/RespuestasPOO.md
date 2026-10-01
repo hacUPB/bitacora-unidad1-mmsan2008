@@ -49,3 +49,16 @@ y en el ultimo ejemplo se puede evidenciar como utiliza reinterpret_cast para po
 <img width="1266" height="987" alt="image" src="https://github.com/user-attachments/assets/562af764-cf26-4d7d-90ad-0d72e3557683" />
 Se puede observar como CircularExplosion hereda de ExplosionParticle que a su ves hereda de particle el depurador me proporciona una tabla virtual con los metodos de particle y los atributos de ExplosionParticle 
 la herencia se implementa en la clase hijo colocando dos puntos el tipo de encapsulamiento y la clase padre de la que va a heredar
+
+# actividad 6 
+
+**Realiza un dibujo con el cuál expliques cómo se implementa el polimorfismo en tiempo de ejecución. Utiliza el concepto de métodos virtuales y la tabla de funciones virtuales. ¿Qué puedes concluir?**
+
+<img width="1377" height="281" alt="Captura de pantalla 2026-10-01 101051" src="https://github.com/user-attachments/assets/233e7df9-dc28-4cbf-8388-f01c2c349976" />
+<img width="1277" height="588" alt="Captura de pantalla 2026-10-01 101106" src="https://github.com/user-attachments/assets/0a6e8e2d-9e70-4a2f-b30d-08ef304792f2" />
+<img width="1010" height="323" alt="Captura de pantalla 2026-10-01 101113" src="https://github.com/user-attachments/assets/69a64bfd-f57c-4b4a-8231-e8070e2ce714" />
+se puede concluir que se crea una clase abstracta llamada animal con un metodo virtual hacer sonido despues se crean dos clases perro y gato estas heredan de animal el metodo hacer sonido y mediante un puntero que va a el objeto gato y perro en memoria, consulta la entrada en su vtable y ejecuta la función correcta
+
+ **¿Qué relación existe entre los métodos virtuales y el polimorfismo?**
+si se define un metodo virtual la clase seria una clase abstracta esto es fundamental para aplicar el polimorfismo ya que mediante una método virtual podemos crear por ejemplo que dos clases hereden este método y hagan una accion diferente 
+
