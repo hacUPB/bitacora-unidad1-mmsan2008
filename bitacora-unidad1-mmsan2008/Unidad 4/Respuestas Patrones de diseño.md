@@ -27,6 +27,10 @@ el patron obeserver permite mediante una subscripcion notificar a varios objetos
 
 # Dibuja un diagrama que muestre la relación entre `Subject`, `Observer`, `ofApp` y `Particle` en el caso de estudio, indicando quién es el Sujeto y quiénes los Observadores.
 
+<img width="836" height="1194" alt="diagrama" src="https://github.com/user-attachments/assets/1944ed10-5ea3-4bc1-b6e5-728c6848e938" />
+
 # Construye un diagrama de secuencia que muestre cómo funciona el patrón Observer al presionar una tecla.
+
+<img width="900" height="790" alt="image" src="https://github.com/user-attachments/assets/ca0b50aa-26e0-487c-8808-c99f1e151da8" />
 
 # ¿Qué ventajas crees que ofrece usar el patrón Observer en esta aplicación en comparación con, por ejemplo, que `ofApp::update` recorriera todas las partículas y les dijera directamente que cambien su comportamiento basado en una variable global? Piensa en términos de acoplamiento y extensibilidad.
