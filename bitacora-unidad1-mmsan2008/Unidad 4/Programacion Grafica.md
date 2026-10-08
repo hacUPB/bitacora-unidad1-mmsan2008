@@ -28,9 +28,9 @@ probando y entediendo los conceptos en el codigo , experimente que pasaba si cam
 <img width="1039" height="55" alt="image" src="https://github.com/user-attachments/assets/9688a33d-109a-41f6-82eb-1e7fef12bae5" />
 tambien probe cambiando el viwport el color y el triangulo y consegui esto.
 <img width="1003" height="597" alt="image" src="https://github.com/user-attachments/assets/0dfb5af1-dc73-4de8-9525-cca2de6653c1" />
-tambien experimente modificando los vertices
+tambien experimente modificando los vertices y cambia el sentido del trangulo
 <img width="359" height="363" alt="image" src="https://github.com/user-attachments/assets/614566fe-9f9e-4cac-b394-b6e797470579" />
-y cambia el sentido del trangulo
+# R//
 con esto puede entender que el triangulo funciona mediante vertices VAO mediante una matriz array
 he entendido en esta actividad 
 que glfw es una biblioteca que por la cual mediante instrucciones de un contexto opengl puedo crear una ventana y con Framebuffer guardar la memoria de la ventana en 
