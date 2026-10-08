@@ -14,3 +14,25 @@ GLAD carga las funciones de opengl
 glm es una bibiloteca de matematicas que sirve para hacer animaciones graficos o transformaciones 
 # ¿Cómo se relacionan entre sí?
 cada una tiene su relacion y glfw opengl32.lib y glad son fundamentales para crear el proyecto glm no es obligatoriom pero ayuda y facilita algunas cosas 
+
+
+# glViewport(0, bufferHeight/2, bufferWidth/2, bufferHeight/2);`
+Cambia los valores de bufferWidth y bufferHeight: divide por 2, por 4, multiplica por 2, por 4, etc. 
+¿Qué pasa? el viwport cambia y el triangulo se sale de la pantalla y se estira 
+¿Qué observas? el triangulo se ve diferente
+¿Qué crees que está pasando? que el viwport no tiene el mismo tamaño de la pantalla y se corta 
+
+# Resumen 
+
+probando y entediendo los conceptos en el codigo , experimente que pasaba si cambiaba la resolcion a 1920 x 1080 y me salio ese mensaje 
+<img width="1039" height="55" alt="image" src="https://github.com/user-attachments/assets/9688a33d-109a-41f6-82eb-1e7fef12bae5" />
+tambien probe cambiando el viwport el color y el triangulo y consegui esto.
+<img width="1003" height="597" alt="image" src="https://github.com/user-attachments/assets/0dfb5af1-dc73-4de8-9525-cca2de6653c1" />
+tambien experimente modificando los vertices
+<img width="359" height="363" alt="image" src="https://github.com/user-attachments/assets/614566fe-9f9e-4cac-b394-b6e797470579" />
+y cambia el sentido del trangulo
+con esto puede entender que el triangulo funciona mediante vertices VAO mediante una matriz array
+he entendido en esta actividad 
+que glfw es una biblioteca que por la cual mediante instrucciones de un contexto opengl puedo crear una ventana y con Framebuffer guardar la memoria de la ventana en 
+la gpu y es donde se dibujan cada cuadro como una hoja y el Viewport es el area del framebuffer que se visualiza
+
