@@ -36,16 +36,17 @@ he entendido en esta actividad
 que glfw es una biblioteca que por la cual mediante instrucciones de un contexto opengl puedo crear una ventana y con Framebuffer guardar la memoria de la ventana en 
 la gpu y es donde se dibujan cada cuadro como una hoja y el Viewport es el area del framebuffer que se visualiza
 
-¿Qué pasa si cambias el primer parámetro de glDrawArrays a GL_LINES? 
+
+# ¿Qué pasa si cambias el primer parámetro de glDrawArrays a GL_LINES? 
 el triangulo se convierte en una linea 
 <img width="378" height="376" alt="image" src="https://github.com/user-attachments/assets/14a3f2e4-9933-450a-bfb1-202bd77788aa" />
-¿Qué pasa si lo cambias a GL_POINTS? 
+# ¿Qué pasa si lo cambias a GL_POINTS? 
 se crean 3 puntos en forma de triangulo
 <img width="372" height="380" alt="image" src="https://github.com/user-attachments/assets/f4df76ad-20ca-4a9e-ac57-b420e8af25df" />
-¿Qué pasa si cambias el tercer parámetro a 2? 
+# ¿Qué pasa si cambias el tercer parámetro a 2? 
 solo quedan 2 vertices
 <img width="380" height="382" alt="image" src="https://github.com/user-attachments/assets/ecc2a9f0-74eb-4911-be60-0ce7ca595577" />
-¿Qué pasa si lo cambias a 4?
+# ¿Qué pasa si lo cambias a 4?
 se crea otro vetice en el medio de triangulo 
 <img width="278" height="290" alt="image" src="https://github.com/user-attachments/assets/7a28c07b-9f70-4363-b708-a1b22d927c47" />
 En esta unidad no profundizaremos en los tipos de primitivas, pero es importante que entiendas que OpenGL puede dibujar diferentes tipos de primitivas (triángulos, líneas, puntos, etc.).
