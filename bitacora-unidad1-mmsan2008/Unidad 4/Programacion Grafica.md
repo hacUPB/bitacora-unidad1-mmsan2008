@@ -74,4 +74,8 @@ En esta unidad no profundizaremos en los tipos de primitivas, pero es importante
      Esta función es fundamental porque define cómo se verá el triángulo en pantalla, el vao es el que permite organizar los vertices y el vbo le da la informacion de tamaño, color etc
 21. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil? no es estrictamente necesario dentro del game loop si solo estás dibujando un único objeto con un único shader program y un único  (VAO).
 
+## Actividad 4
+
+¿Cuál es la diferencia entre una CPU y una GPU?
+la diferencia entre la cpu y la gpu, es que la cpu tienen menos nucleos pero hace tareas mas complejas y scuencialmente, la gpu tiene miles de nucles pero hace muchas tareas mas sencillas simultáneamente
 
