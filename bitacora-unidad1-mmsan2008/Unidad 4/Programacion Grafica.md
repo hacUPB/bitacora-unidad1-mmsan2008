@@ -79,3 +79,4 @@ En esta unidad no profundizaremos en los tipos de primitivas, pero es importante
 ¿Cuál es la diferencia entre una CPU y una GPU?
 la diferencia entre la cpu y la gpu, es que la cpu tienen menos nucleos pero hace tareas mas complejas y scuencialmente, la gpu tiene miles de nucles pero hace muchas tareas mas sencillas simultáneamente
 
+
