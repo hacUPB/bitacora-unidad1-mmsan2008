@@ -65,9 +65,13 @@ En esta unidad no profundizaremos en los tipos de primitivas, pero es importante
 11. ¿En todo la analizado hasta ahora qué rol juega los drivers de la GPU y la GPU misma?
     
 13. ¿Por qué crees que sea necesario activar el VSync? ¿Si no lo activas y la imagen es estática qué crees que pase, y si es dinámica?
-14. En esta unidad estamos usando OpenGL moderno, pero ¿Qué es OpenGL Legacy? ¿Qué diferencias hay entre ambos?
-15. ¿Qué es el shader program? ¿Por qué es importante en OpenGL moderno?
-16. Trata de revisar el código setupTriangle(), intuitivamente ¿Qué crees que hace? ¿Qué crees que es el VAO y el VBO?
-17. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil?
-18. Finalmente, recuerda lo que hace `glfwSwapBuffers(mainWindow);` ¿Por qué crees que es importante? ¿Qué pasaría si no lo llamas? ¿Cómo explicas lo que pasa si no lo llamas? (experimenta)
+    la tasa de refresco de la ventana al mismo valor que la tasa de refresco del monitor, Esto evita el tearing y hace que el movimiento sea más suave.
+15. En esta unidad estamos usando OpenGL moderno, pero ¿Qué es OpenGL Legacy? ¿Qué diferencias hay entre ambos?
+    el legacy es el modelo de arquitectura de función fija y el moderno elimina esa función fija y obliga al programador a usar sombreadores (shaders)
+17. ¿Qué es el shader program? ¿Por qué es importante en OpenGL moderno?
+     los shaders son los programas que OpenGL ejecuta en la GPU para procesar los vértices y fragmentos (píxeles) de la escena, y opengl moderno es importante por que es el que permite funcionar los shaders
+19. Trata de revisar el código setupTriangle(), intuitivamente ¿Qué crees que hace? ¿Qué crees que es el VAO y el VBO?
+     Esta función es fundamental porque define cómo se verá el triángulo en pantalla, el vao es el que permite organizar los vertices y el vbo le da la informacion de tamaño, color etc
+21. En el ciclo principal (game loop) de OpenGL, notaste que en cada frame (cuadro) le decimos a openGL que use el shader program y el VAO. Si le indicas esto antes del game loop ¿Será necesario seguirlo haciendo en cada loop? Si no es necesario ¿En qué casos crees que esto puede ser útil? no es estrictamente necesario dentro del game loop si solo estás dibujando un único objeto con un único shader program y un único  (VAO).
+
 
