@@ -37,7 +37,7 @@ el patron obeserver permite mediante una subscripcion notificar a varios objetos
 ## actividad 12
 <img width="1018" height="758" alt="image" src="https://github.com/user-attachments/assets/ce587a20-aadb-4862-bb56-9a0d6e8f57c6" />
 
-
+```
 ## codigo 
 
 #include "ofApp.h"
@@ -249,6 +249,7 @@ void ofApp::keyPressed(int key) {
 		break;
 	}
 }
+```
 
 2. en el particle factory cree una nueva particula llamada ball con atributtos diferentes
 3. el patron observers se  implementa de igual manera que en las otras particulas al crearla esta notifica al observer y la llama
