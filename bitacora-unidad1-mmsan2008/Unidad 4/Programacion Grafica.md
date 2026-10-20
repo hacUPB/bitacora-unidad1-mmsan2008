@@ -76,7 +76,22 @@ En esta unidad no profundizaremos en los tipos de primitivas, pero es importante
 
 ## Actividad 4
 
+
+
 ¿Cuál es la diferencia entre una CPU y una GPU?
 la diferencia entre la cpu y la gpu, es que la cpu tienen menos nucleos pero hace tareas mas complejas y scuencialmente, la gpu tiene miles de nucles pero hace muchas tareas mas sencillas simultáneamente
 
 
+1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
+
+   
+3. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
+4. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
+   el proceso de combertir una imagen en pixeles que los dispositivos puedan mostrar
+   
+6. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
+   son los atributos visuales de cada como el color la profundidad y otros atributos de los fragmentos esta informacion sirve para el pixel final
+8. Explica qué problema resuelve el **Z-buffer** y ¿Qué es el depth test?
+9. ¿Por qué se presenta el problema de la **aliasing**? ¿Qué es el anti-aliasing?
+10. ¿Qué relación hay entre la iluminación y el fragment shader? Siempre es necesario tener en cuenta la iluminación en un fragment shader? o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
+11. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
