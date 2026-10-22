@@ -125,4 +125,9 @@ Definimos los vértices del triángulo; estos dan la forma mediante unas coorden
    
 ##  Escribe un resumen en tus propias palabras de lo que necesitas para poder usar un shader en OpenGL.
    Para poder usar un shader primordialmente se necesita crear un vertex shader y un fragment shader y además asignar la versión de cada uno en el vertex shader necesitamos representar la posición de los datos de los vértices y definir la función principal, en el fragment shader necesitamos asignar el color y de igual forma la función principal.
-   
+
+
+   ## modificacion de código 
+   Modifiqué el código como se indicó, pero no se generó nada. 
+<img width="1919" height="1034" alt="image" src="https://github.com/user-attachments/assets/cab028a6-9fac-49b7-8d7f-23bab2be7dca" />
+
