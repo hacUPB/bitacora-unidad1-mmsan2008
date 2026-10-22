@@ -83,15 +83,37 @@ la diferencia entre la cpu y la gpu, es que la cpu tienen menos nucleos pero hac
 
 
 1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
+los tres pasos claves son 
+el vertex shading: el objetivo de este es cojer los vértices de los modelos 3D, transforman sus posiciones y se proyectan para determinar dónde aparecerán en la pantalla.
+la Rasterización: aqui los triángulos se convierten en fragmentos que corresponden a posibles píxeles de la imagen.
 
+El fragment shader: este calcula el color de los fragmentos.
    
-3. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar?
-4. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
-   el proceso de combertir una imagen en pixeles que los dispositivos puedan mostrar
+3. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar
+si el pipeline es programable, significa que podemos escribir programas llamados shaders para controlar determinadas etapas del procesamiento gráfico, en lugar de depender exclusivamente de las operaciones predefinidas por OpenGL.
+la diferencia entre el pipeline fijo y el programable es que en el fijo todo es más predeterminado y en el programable nos permite crear shaders personalizados.
+Veo varias ventajas, como tener más libertad y crear más cosas fuera de lo normal, con más creatividad, control y personalización.
+si el pipeline es programable principalmente se programan los shaders que necesita una aplicación
+
+
+
+5. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
+   el proceso de convertir una imagen en píxeles que los dispositivos puedan mostrar
    
-6. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
-   son los atributos visuales de cada como el color la profundidad y otros atributos de los fragmentos esta informacion sirve para el pixel final
-8. Explica qué problema resuelve el **Z-buffer** y ¿Qué es el depth test?
-9. ¿Por qué se presenta el problema de la **aliasing**? ¿Qué es el anti-aliasing?
-10. ¿Qué relación hay entre la iluminación y el fragment shader? Siempre es necesario tener en cuenta la iluminación en un fragment shader? o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
-11. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
+7. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
+   son los atributos visuales de cada como el color la profundidad y otros atributos de los fragmentos esta información sirve para el pixel final
+8. Explica qué problema resuelve el **Z-buffer** y ¿qué es el depth test?
+   El Z-buffer es un mecanismo que permite gestionar la profundidad de los objetos para determinar cuáles están delante de otro sin este mecanismo, un objeto dibujado después podría aparecer por encima de otro aunque estuviera más lejos de la cámara.
+el depth test es la prueba que compara la profundidad del fragmento con la que ya está almacenada en el búfer de profundidad.
+
+10. ¿Por qué se presenta el problema del **aliasing**? ¿Qué es el anti-aliasing?
+    El aliasing aparece porque una imagen digital representa una escena continua mediante una cantidad limitada de píxeles. Cuando hay detalles o bordes que no se pueden representar adecuadamente con esa resolución, aparecen errores visuales.
+  el anti-aliasing  es un conjunto de técnicas que reducen esos defectos visuales, estimando mejor cómo deben representarse los bordes y los detalles en los píxeles.
+
+12. ¿Qué relación hay entre la iluminación y el fragment shader? ¿Siempre es necesario tener en cuenta la iluminación en un fragment shader? ¿o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
+    El fragment shader es uno de los lugares donde se puede calcular la iluminación de una superficie sin embargo, no es obligatorio implementar iluminación en todos los fragment shaders
+Con iluminación puede representar volumen, sombras y reflejos, requiere cálculos adicionales y el aspecto depende de las luces y los materiales
+Sin iluminación, puede producir colores uniformes y estilos gráficos planos, Suele requerir menos cálculos, El color depende de lo que programes directamente.
+    
+14. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
+Cuando una escena tiene varias luces, la GPU debe considerar cómo contribuye cada una al aspecto de los objetos.
