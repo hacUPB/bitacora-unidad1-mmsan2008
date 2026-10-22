@@ -78,18 +78,17 @@ En esta unidad no profundizaremos en los tipos de primitivas, pero es importante
 
 
 
-¿Cuál es la diferencia entre una CPU y una GPU?
+##  ¿Cuál es la diferencia entre una CPU y una GPU?
 la diferencia entre la cpu y la gpu, es que la cpu tienen menos nucleos pero hace tareas mas complejas y scuencialmente, la gpu tiene miles de nucles pero hace muchas tareas mas sencillas simultáneamente
 
 
-1. ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
+##  ¿Cuáles son los tres pasos claves del pipeline de OpenGL? Explica en tus propias palabras cuál es el objetivo de cada paso.
 los tres pasos claves son 
 el vertex shading: el objetivo de este es cojer los vértices de los modelos 3D, transforman sus posiciones y se proyectan para determinar dónde aparecerán en la pantalla.
 la Rasterización: aqui los triángulos se convierten en fragmentos que corresponden a posibles píxeles de la imagen.
-
 El fragment shader: este calcula el color de los fragmentos.
    
-3. La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar
+##  La gran novedad que introduce OpenGL moderno es el pipeline programable. ¿Qué significa esto? ¿Qué diferencia hay entre el pipeline fijo y el programable? ¿Qué ventajas le ves a esto? y si el pipeline es programable, ¿Qué tengo que programar
 si el pipeline es programable, significa que podemos escribir programas llamados shaders para controlar determinadas etapas del procesamiento gráfico, en lugar de depender exclusivamente de las operaciones predefinidas por OpenGL.
 la diferencia entre el pipeline fijo y el programable es que en el fijo todo es más predeterminado y en el programable nos permite crear shaders personalizados.
 Veo varias ventajas, como tener más libertad y crear más cosas fuera de lo normal, con más creatividad, control y personalización.
@@ -97,33 +96,33 @@ si el pipeline es programable principalmente se programan los shaders que necesi
 
 
 
-5. Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
+##  Si fueras a describir el proceso de **rasterización** ¿Qué dirías?
    el proceso de convertir una imagen en píxeles que los dispositivos puedan mostrar
    
-7. ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
+##  ¿Qué son los fragmentos? ¿Es lo mismo un fragmento que un pixel? ¿Por qué?
    son los atributos visuales de cada como el color la profundidad y otros atributos de los fragmentos esta información sirve para el pixel final
-8. Explica qué problema resuelve el **Z-buffer** y ¿qué es el depth test?
+##  Explica qué problema resuelve el **Z-buffer** y ¿qué es el depth test?
    El Z-buffer es un mecanismo que permite gestionar la profundidad de los objetos para determinar cuáles están delante de otro sin este mecanismo, un objeto dibujado después podría aparecer por encima de otro aunque estuviera más lejos de la cámara.
 el depth test es la prueba que compara la profundidad del fragmento con la que ya está almacenada en el búfer de profundidad.
 
-10. ¿Por qué se presenta el problema del **aliasing**? ¿Qué es el anti-aliasing?
-    El aliasing aparece porque una imagen digital representa una escena continua mediante una cantidad limitada de píxeles. Cuando hay detalles o bordes que no se pueden representar adecuadamente con esa resolución, aparecen errores visuales.
-  el anti-aliasing  es un conjunto de técnicas que reducen esos defectos visuales, estimando mejor cómo deben representarse los bordes y los detalles en los píxeles.
+##  ¿Por qué se presenta el problema del **aliasing**? ¿Qué es el anti-aliasing?
+El aliasing aparece porque una imagen digital representa una escena continua mediante una cantidad limitada de píxeles. Cuando hay detalles o bordes que no se pueden representar adecuadamente con esa resolución, aparecen errores visuales.
+el anti-aliasing  es un conjunto de técnicas que reducen esos defectos visuales, estimando mejor cómo deben representarse los bordes y los detalles en los píxeles.
 
-12. ¿Qué relación hay entre la iluminación y el fragment shader? ¿Siempre es necesario tener en cuenta la iluminación en un fragment shader? ¿o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
-    El fragment shader es uno de los lugares donde se puede calcular la iluminación de una superficie sin embargo, no es obligatorio implementar iluminación en todos los fragment shaders
+##  ¿Qué relación hay entre la iluminación y el fragment shader? ¿Siempre es necesario tener en cuenta la iluminación en un fragment shader? ¿o puedo hacer un fragment shader sin iluminación? Explica que implicaciones tiene esto.
+El fragment shader es uno de los lugares donde se puede calcular la iluminación de una superficie sin embargo, no es obligatorio implementar iluminación en todos los fragment shaders
 Con iluminación puede representar volumen, sombras y reflejos, requiere cálculos adicionales y el aspecto depende de las luces y los materiales
 Sin iluminación, puede producir colores uniformes y estilos gráficos planos, Suele requerir menos cálculos, El color depende de lo que programes directamente.
     
-14. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
+##  ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
 Cuando una escena tiene varias luces, la GPU debe considerar cómo contribuye cada una al aspecto de los objetos.
 
 
-1. Escribe un resumen en tus propias palabras de lo que se necesita para dibujar un triángulo en OpenGL.
+##  Escribe un resumen en tus propias palabras de lo que se necesita para dibujar un triángulo en OpenGL.
 Para dibujar un triángulo se necesita en primera instancia crear un objeto opengl que almacene los datos de los vértices y los envíe a la gpu, ya en el código se inicia creando una función llamada setuptriangle
 Definimos los vértices del triángulo; estos dan la forma mediante unas coordenadas de -1 y 1. Después, creamos un objeto VAO y un VBO para obtener la dirección ip de estos. Luego, hacemos binding al VAO y VBO para que se apliquen todos los comandos que se envían desde OpenGL. Se mandan los datos de los vértices al buffer de vértices, se configuran los atributos y, de último, hacemos unbinding del VAO, también tenemos que agregar shaders en este caso se agrega un vertex shader y un fragment shader el vertex shader con los datos de los vértices asigna la posición de estos y el fragment shader asigna el color .
 
    
-3. Escribe un resumen en tus propias palabras de lo que necesitas para poder usar un shader en OpenGL.
+##  Escribe un resumen en tus propias palabras de lo que necesitas para poder usar un shader en OpenGL.
    Para poder usar un shader primordialmente se necesita crear un vertex shader y un fragment shader y además asignar la versión de cada uno en el vertex shader necesitamos representar la posición de los datos de los vértices y definir la función principal, en el fragment shader necesitamos asignar el color y de igual forma la función principal.
    
