@@ -117,3 +117,13 @@ Sin iluminación, puede producir colores uniformes y estilos gráficos planos, S
     
 14. ¿Qué implica para la GPU que una aplicación tenga múltiples fuentes de iluminación?
 Cuando una escena tiene varias luces, la GPU debe considerar cómo contribuye cada una al aspecto de los objetos.
+
+
+1. Escribe un resumen en tus propias palabras de lo que se necesita para dibujar un triángulo en OpenGL.
+Para dibujar un triángulo se necesita en primera instancia crear un objeto opengl que almacene los datos de los vértices y los envíe a la gpu, ya en el código se inicia creando una función llamada setuptriangle
+Definimos los vértices del triángulo; estos dan la forma mediante unas coordenadas de -1 y 1. Después, creamos un objeto VAO y un VBO para obtener la dirección ip de estos. Luego, hacemos binding al VAO y VBO para que se apliquen todos los comandos que se envían desde OpenGL. Se mandan los datos de los vértices al buffer de vértices, se configuran los atributos y, de último, hacemos unbinding del VAO, también tenemos que agregar shaders en este caso se agrega un vertex shader y un fragment shader el vertex shader con los datos de los vértices asigna la posición de estos y el fragment shader asigna el color .
+
+   
+3. Escribe un resumen en tus propias palabras de lo que necesitas para poder usar un shader en OpenGL.
+   Para poder usar un shader primordialmente se necesita crear un vertex shader y un fragment shader y además asignar la versión de cada uno en el vertex shader necesitamos representar la posición de los datos de los vértices y definir la función principal, en el fragment shader necesitamos asignar el color y de igual forma la función principal.
+   
