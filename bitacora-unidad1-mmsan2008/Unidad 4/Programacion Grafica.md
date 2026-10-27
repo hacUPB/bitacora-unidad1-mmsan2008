@@ -134,12 +134,43 @@ Definimos los vértices del triángulo; estos dan la forma mediante unas coorden
 
 # Actividad 5 
 
-<img width="1039" height="644" alt="image" src="https://github.com/user-attachments/assets/5b74d145-ccc7-4f89-9dac-32a15e50c184" />
+<img width="1910" height="990" alt="image" src="https://github.com/user-attachments/assets/708c0f8e-277d-4d9f-be43-e757b2791d37" />
 
-<img width="1183" height="621" alt="image" src="https://github.com/user-attachments/assets/602d889b-11ad-4fee-bcb3-9b1bfa167c09" />
+<img width="1914" height="1001" alt="image" src="https://github.com/user-attachments/assets/a91cd779-cd0e-4c41-9aed-31f35555fed0" />
 
 3. Explica el proceso de normalización de las coordenadas del mouse y cómo se relaciona con el sistema de coordenadas de OpenGL.
    primero se optiene la posición de las coordenadas del mause y se modifica la altura y anchura de la pantalla con valores entre -1 y 1
 5. Explica el proceso de normalización a coordenadas de dispositivo (NDC) y cómo se relaciona con el sistema de coordenadas de OpenGL.
 se normaliza el offset mediante uniform y se relaciona por que en las cordenadas de open gl se utilizan cordenadas de -1 y 1 para determinar la ubicacion de los vertices
+
+# Actividad 6
+
+1. Describe brevemente los cambios que realizaste en el código C++ (dónde obtienes el tiempo, cómo y dónde actualizas el uniform).
+   primero de declara la variable global uniform en el fragment shader, optengo la ubicacion de los uniformes , declaro una variable float time value que sea igual al metodo glfwgettime para obtener el tiempo y por ultimo envio los uniformes al shader .
+3. Pega el código modificado de tu *fragment shader*.
+''    #version 460 core
+
+ out vec4 FragColor;
+ uniform float time;
+
+ void main() {
+     float ocilacion = (sin(time * 2.0) + 1.0) / 2.0;
+
+     FragColor = vec4(1.0, ocilacion, 0.2, 1.0);
+ }''
+5. Explica cómo usaste la función de tiempo (`sin`, `cos`, u otra) para lograr el efecto de cambio de color cíclico. ¿Qué rango de valores produce tu cálculo y cómo afecta eso al color final?
+utilice la funcion sin que fue proporcionada en la actividad y multiplique el time por 2 para que este cambie de color  mas rapido, mi calculo modifica el verde y hace que ocile de 0 a 1 haciendo que cambie de color.
+6. Incluye una captura de pantalla o **UN ENLACE** a un video mostrando el resultado del triángulo con color cambiante.
+7. **Reflexión:** ¿Qué otros efectos visuales simples podrías lograr usando el tiempo como `uniform`? Piensa en la posición, el tamaño o la rotación (aunque no hemos visto rotaciones formalmente, ¡intuitivamente podrías intentarlo!). Anota al menos una idea.
+con el uniform podria modificar el movimiento de triangulo haciendo que gire en su propio eje, modificandolo en el vertex shader.
+
+
+<img width="396" height="399" alt="image" src="https://github.com/user-attachments/assets/f0342111-71e0-4434-81c5-0d82b2f2e1af" />
+<img width="396" height="392" alt="image" src="https://github.com/user-attachments/assets/63240810-52f0-41ef-931c-2977b167fd87" />
+<img width="391" height="393" alt="image" src="https://github.com/user-attachments/assets/2e6ed594-113a-4d2a-93fc-ec264532bbd8" />
+
+https://github.com/user-attachments/assets/fbf43628-31b0-4592-95b4-92c7b4026057
+
+
+
 
