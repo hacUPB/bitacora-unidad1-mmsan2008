@@ -131,3 +131,15 @@ Definimos los vértices del triángulo; estos dan la forma mediante unas coorden
    Modifiqué el código como se indicó, pero no se generó nada. 
 <img width="1919" height="1034" alt="image" src="https://github.com/user-attachments/assets/cab028a6-9fac-49b7-8d7f-23bab2be7dca" />
 
+
+# Actividad 5 
+
+<img width="1039" height="644" alt="image" src="https://github.com/user-attachments/assets/5b74d145-ccc7-4f89-9dac-32a15e50c184" />
+
+<img width="1183" height="621" alt="image" src="https://github.com/user-attachments/assets/602d889b-11ad-4fee-bcb3-9b1bfa167c09" />
+
+3. Explica el proceso de normalización de las coordenadas del mouse y cómo se relaciona con el sistema de coordenadas de OpenGL.
+   primero se optiene la posición de las coordenadas del mause y se modifica la altura y anchura de la pantalla con valores entre -1 y 1
+5. Explica el proceso de normalización a coordenadas de dispositivo (NDC) y cómo se relaciona con el sistema de coordenadas de OpenGL.
+se normaliza el offset mediante uniform y se relaciona por que en las cordenadas de open gl se utilizan cordenadas de -1 y 1 para determinar la ubicacion de los vertices
+
